@@ -51,6 +51,9 @@ def normalize_model_name(name: str | None, debug_model: str | None = None) -> st
         "codex-mini": "codex-mini-latest",
         "codex-mini-latest": "codex-mini-latest",
         "gpt-5.1-codex-mini": "gpt-5.1-codex-mini",
+        "gpt5.2-codex": "gpt-5.2-codex",
+        "gpt-5.2-codex": "gpt-5.2-codex",
+        "gpt-5.2-codex-latest": "gpt-5.2-codex",
     }
     return mapping.get(base, base)
 
