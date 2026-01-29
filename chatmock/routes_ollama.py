@@ -102,6 +102,7 @@ def ollama_tags() -> Response:
         "gpt-5.1-codex-mini",
         "codex-mini",
         "gpt-5.2-codex",
+        "gpt-5.2",
     ]
     if expose_variants:
         model_ids.extend(
@@ -127,6 +128,10 @@ def ollama_tags() -> Response:
                 "gpt-5.2-codex-high",
                 "gpt-5.2-codex-medium",
                 "gpt-5.2-codex-low",
+                "gpt-5.2-xhigh",
+                "gpt-5.2-high",
+                "gpt-5.2-medium",
+                "gpt-5.2-low",
             ]
         )
     models = []

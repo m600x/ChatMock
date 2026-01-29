@@ -540,6 +540,7 @@ def list_models() -> Response:
         ("gpt-5.1-codex-mini", []),
         ("codex-mini", []),
         ("gpt-5.2-codex", ["xhigh", "high", "medium", "low"]),
+        ("gpt-5.2", ["xhigh", "high", "medium", "low"]),
     ]
     model_ids: List[str] = []
     for base, efforts in model_groups:
