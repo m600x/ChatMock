@@ -117,24 +117,15 @@ curl http://127.0.0.1:8000/v1/chat/completions \
 - Use responsibly and at your own risk. This project is not affiliated with OpenAI, and is a educational exercise.
 
 # Supported models
-- `gpt-5`
-- `gpt-5.1`
-- `gpt-5-codex`
-- `gpt-5.1-codex`
-- `gpt-5.1-codex-max`
-- `gpt-5.1-codex-mini`
-- `codex-mini`
+- `gpt-5.2`
+- `gpt-5.2-codex`
 
 # Customisation / Configuration
 
 ### Thinking effort
 
-- `--reasoning-effort` (choice of minimal,low,medium,high,xhigh)<br>
-GPT-5 has a configurable amount of "effort" it can put into thinking, which may cause it to take more time for a response to return, but may overall give a smarter answer. Applying this parameter after `serve` forces the server to use this reasoning effort by default, unless overrided by the API request with a different effort set. The default reasoning effort without setting this parameter is `medium`. The `gpt-5.1` family (including codex) supports `low`, `medium`, and `high` while `gpt-5.1-codex-max` adds `xhigh`; neither offers a `minimal` variant.
-
-### Thinking summaries
-
-- `--reasoning-summary` (choice of auto,concise,detailed,none)<br>
+- `--reasoning-effort` (choice of low,medium,high,xhigh)<br>
+GPT-5.2 has a configurable amount of "effort" it can put into thinking, which may cause it to take more time for a response to return, but may overall give a smarter answer. Applying this parameter after `serve` forces the server to use this reasoning effort by default, unless overrided by the API request with a different effort set. The default reasoning effort without setting this parameter is `medium`. The `gpt-5.2` family supports `low`, `medium`, `high`, and `xhigh`.
 Models like GPT-5 do not return raw thinking content, but instead return thinking summaries. These can also be customised by you.
 
 ### OpenAI Tools

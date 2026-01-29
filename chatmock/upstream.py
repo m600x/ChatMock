@@ -28,7 +28,7 @@ def normalize_model_name(name: str | None, debug_model: str | None = None) -> st
     if isinstance(debug_model, str) and debug_model.strip():
         return debug_model.strip()
     if not isinstance(name, str) or not name.strip():
-        return "gpt-5"
+        return "gpt-5.2"
     base = name.split(":", 1)[0].strip()
     for sep in ("-", "_"):
         lowered = base.lower()
@@ -38,20 +38,7 @@ def normalize_model_name(name: str | None, debug_model: str | None = None) -> st
                 base = base[: -len(suffix)]
                 break
     mapping = {
-        "gpt5": "gpt-5",
-        "gpt-5-latest": "gpt-5",
-        "gpt-5": "gpt-5",
-        "gpt-5.1": "gpt-5.1",
         "gpt-5.2": "gpt-5.2",
-        "gpt5-codex": "gpt-5-codex",
-        "gpt-5-codex": "gpt-5-codex",
-        "gpt-5-codex-latest": "gpt-5-codex",
-        "gpt-5.1-codex": "gpt-5.1-codex",
-        "gpt-5.1-codex-max": "gpt-5.1-codex-max",
-        "codex": "codex-mini-latest",
-        "codex-mini": "codex-mini-latest",
-        "codex-mini-latest": "codex-mini-latest",
-        "gpt-5.1-codex-mini": "gpt-5.1-codex-mini",
         "gpt5.2-codex": "gpt-5.2-codex",
         "gpt-5.2-codex": "gpt-5.2-codex",
         "gpt-5.2-codex-latest": "gpt-5.2-codex",
