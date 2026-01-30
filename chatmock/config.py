@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from flask import current_app
 import os
 import sys
 from pathlib import Path
@@ -9,7 +8,6 @@ from pathlib import Path
 CLIENT_ID_DEFAULT = os.getenv("CHATGPT_LOCAL_CLIENT_ID") or "app_EMoamEEZ73f0CkXaXp7hrann"
 OAUTH_ISSUER_DEFAULT = os.getenv("CHATGPT_LOCAL_ISSUER") or "https://auth.openai.com"
 OAUTH_TOKEN_URL = f"{OAUTH_ISSUER_DEFAULT}/oauth/token"
-verbose = bool(current_app.config.get("VERBOSE"))
 
 CHATGPT_RESPONSES_URL = "https://chatgpt.com/backend-api/codex/responses"
 
