@@ -36,8 +36,7 @@ def _read_prompt_text(filename: str) -> str | None:
 
 def read_base_instructions() -> str:
     filepath = os.getenv("PROMPT_PATH") or "prompt.md"
-    if verbose:
-        print(f"Reading base prompt from: {filepath}")
+    print(f"Reading base prompt from: {filepath}")
     content = _read_prompt_text(filepath)
     if content is None:
         raise FileNotFoundError(f"Failed to read {filepath}; expected adjacent to package or CWD.")
@@ -46,8 +45,7 @@ def read_base_instructions() -> str:
 
 def read_gpt5_codex_instructions(fallback: str) -> str:
     filepath = os.getenv("PROMPT_GPT5_CODEX_PATH") or "prompt_gpt5_codex.md"
-    if verbose:
-        print(f"Reading GPT-5 Codex prompt from: {filepath}")
+    print(f"Reading GPT-5 Codex prompt from: {filepath}")
     content = _read_prompt_text(filepath)
     if content is None or content.strip() == "":
         return fallback
